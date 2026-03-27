@@ -1,0 +1,31 @@
+.marquee {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  padding: 14px 0;
+  background: var(--bg-2);
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 28s linear infinite;
+}
+
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+
+.marquee__item {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  padding: 0 40px;
+  white-space: nowrap;
+  transition: color var(--duration-fast) var(--ease);
+}
+
+.marquee__item:hover {
+  color: var(--gold);
+}
